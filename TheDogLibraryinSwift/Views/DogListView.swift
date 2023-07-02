@@ -30,7 +30,7 @@ class DogListView: UIView {
                 self?.collectionView.reloadData()
             }
         }
-//        viewModel.delegate = self
+
         setupUI()
         
     }
@@ -54,20 +54,3 @@ class DogListView: UIView {
     
 }
 
-//extension DogListView: DogListViewModelDelegate {
-//    func didSelectItem(_ dogModel: DogModel) {
-//        <#code#>
-//    }
-//    
-//    
-//    
-//    
-//}
-
-/*
- let viewModel = CharacterDetailVM(character: character)
- let detailVC = CharacterDetailVC(viewModel: viewModel)
- detailVC.navigationItem.largeTitleDisplayMode = .never
- navigationController?.pushViewController(detailVC, animated: true)
-
- */

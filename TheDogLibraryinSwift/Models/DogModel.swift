@@ -11,7 +11,7 @@ import UIKit
 struct DogModel: Codable {
     let id: Int
     let name: String
-    let bredFor: String?
+    let bred_for: String?
     let temperament: String?
     let image: Image
     
@@ -28,16 +28,7 @@ struct DogModel: Codable {
             completion(.failure(URLError(.badURL)))
             return
         }
-        let task = URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data, error == nil else {
-                completion(.failure(error ?? URLError(.badServerResponse)))
-                return
-            }
-            completion(.success(data))
-        }
-        
-        task.resume()
-
+        ImageLoader.shared.downloadImage(url, completion: completion)
         
     }
 }

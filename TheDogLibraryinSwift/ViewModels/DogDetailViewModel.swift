@@ -40,7 +40,7 @@ final class DogDetailViewModel {
     }
     
     var dogBredFor: String {
-        return "Skilled For: \(dogModel.bredFor ?? "Pet")"
+        return "Skilled For: \(dogModel.bred_for ?? "Pet")"
     }
     
     

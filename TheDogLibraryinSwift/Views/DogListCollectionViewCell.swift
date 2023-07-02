@@ -17,7 +17,6 @@ class DogListCollectionViewCell: UICollectionViewCell {
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         iv.translatesAutoresizingMaskIntoConstraints = false
-//        iv.frame = .init(x: 0, y: 0, width: 200, height: 200)
         return iv
     }()
     
