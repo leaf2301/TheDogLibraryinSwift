@@ -28,6 +28,7 @@ struct DogModel: Codable {
             completion(.failure(URLError(.badURL)))
             return
         }
+        
         ImageLoader.shared.downloadImage(url, completion: completion)
         
     }

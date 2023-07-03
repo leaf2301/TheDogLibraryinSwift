@@ -74,23 +74,4 @@ final class APIService {
             }
         }.resume()
     }
-    
-    func fetchImage(url: URL?, completion: @escaping (Result<Data, Error>) -> ()) {
-        guard let url = url else {
-            completion(.failure(URLError(.badURL)))
-            return
-        }
-        let task = URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data, error == nil else {
-                completion(.failure(error ?? URLError(.badServerResponse)))
-                return
-            }
-            completion(.success(data))
-        }
-        
-        task.resume()
-
-        
-    }
-
 }

@@ -64,7 +64,7 @@ class DetailViewController: UIViewController {
     }
     
     private func fetchData() {
-        APIService.shared.fetchImage(url: viewModel.dogModel.dogImageURL) { [weak self] result in
+        viewModel.dogModel.fetchImage {   [weak self] result in
             switch result {
             case .success(let data):
                 DispatchQueue.main.async {
@@ -73,6 +73,7 @@ class DetailViewController: UIViewController {
             case .failure(let error):
                 print(error)
             }
+
         }
         
         nameLabel.text = viewModel.dogName
