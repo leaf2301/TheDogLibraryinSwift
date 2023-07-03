@@ -1,9 +1,12 @@
 # TheDogLibraryinSwift
 Swift-UIKit
 A small app based on https://www.thedogapi.com 
+
 Swift, UIKit, MVVM, NSCache.
+
 Using third party SDWebImage codes through SwiftPackageManager.
 https://github.com/SDWebImage/SDWebImage
+
 Expected: loadingView for images, specificly handling errors, and searchable. 
 
 
